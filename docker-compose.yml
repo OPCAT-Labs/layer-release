@@ -1,0 +1,14 @@
+services:
+  opcatlayer:
+    image: opcatlabs/opcatlayer:9dc445f
+    entrypoint: ["bitcoind", "-datadir=/data/"]
+    volumes:
+      - ./data:/data
+    ports:
+      - "28444:28444"
+      - "28443:28443"
+    healthcheck:
+      test: ["CMD", "bitcoin-cli", "-datadir=/data/", "getblockchaininfo"]
+      interval: 60s
+      timeout: 10s
+      retries: 3
