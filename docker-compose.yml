@@ -1,6 +1,6 @@
 services:
   opcatlayer:
-    image: opcatlabs/opcatlayer:9dc445f
+    image: opcatlabs/opcatlayer:latest
     entrypoint: ["bitcoind", "-datadir=/data/"]
     volumes:
       - ./data:/data
