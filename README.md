@@ -1,4 +1,4 @@
-# layerd-release
+# layer-release
 
 ## Run
 
