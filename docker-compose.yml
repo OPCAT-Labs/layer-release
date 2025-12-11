@@ -1,6 +1,7 @@
 services:
   opcatlayer:
     image: opcatlabs/opcatlayer:latest
+    platform: linux/amd64
     entrypoint: ["bitcoind", "-datadir=/data/"]
     volumes:
       - ./data:/data
